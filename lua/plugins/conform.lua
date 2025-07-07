@@ -4,10 +4,10 @@ return {
     formatters_by_ft = {
       -- Web formats
       html = { "prettier" },
-      javascript = { "prettier" },
-      typescript = { "prettier" },
-      javascriptreact = { "prettier" },
-      typescriptreact = { "prettier" },
+      javascript = { "prettierd" },
+      typescript = { "prettierd" },
+      javascriptreact = { "prettierd" },
+      typescriptreact = { "prettierd" },
       -- Optional: CSS/SCSS if needed
       css = { "prettier" },
       scss = { "prettier" },
@@ -17,6 +17,12 @@ return {
         prepend_args = {
           "--parser",
           "typescript", -- For TS files
+        },
+      },
+      prettierd = {
+        prepend_args = {
+          "--parser",
+          "typescript",
         },
       },
     },
