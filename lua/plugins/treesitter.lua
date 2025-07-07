@@ -5,10 +5,12 @@ return {
     ensure_installed = {
       "html",
       "javascript",
+      "jsx",
       "lua",
       "tsx",
       "typescript",
       "css",
+      "go",
       -- Add more as needed
     },
     highlight = {

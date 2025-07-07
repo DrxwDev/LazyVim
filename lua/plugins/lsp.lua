@@ -11,12 +11,12 @@ return {
         "tsserver",
         "html",
         "cssls",
+        "gopls",
         "tailwindcss",
         "lua_ls",
         "emmet_ls",
         "eslint",
         "tailwindcss",
-        "omnisharp",
       }
       opts.servers.emmet_ls = {
         filetypes = {
