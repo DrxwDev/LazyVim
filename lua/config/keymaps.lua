@@ -32,6 +32,10 @@ keymap.set("n", "<leader>gm", ":GitMessenger<cr>", { noremap = true })
 
 -- Vim Be Good
 keymap.set("n", "<leader>vg", ":VimBeGood<cr>")
+keymap.set("n", "<leader>du", ":DBUI<cr>")
+keymap.set("n", "<leader>dt", ":DBUIToggle<cr>")
+keymap.set("n", "<leader>da", ":DBUIAddConnection<cr>")
+keymap.set("n", "<leader>df", ":DBUIFindBuffer<cr>")
 
 -- Refactor
 keymap.set("x", "<leader>r", "Refactor")
