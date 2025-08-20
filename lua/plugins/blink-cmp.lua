@@ -27,7 +27,7 @@ return {
           ["<C-n>"] = "select_next_item",
           ["<C-Space>"] = "complete",
           ["<C-e>"] = "close",
-          ["<CR>"] = "accept",
+          ["<TAB>"] = "accept",
         },
       },
 
