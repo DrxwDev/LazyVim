@@ -21,5 +21,9 @@
   "closest": {
     "prefix": "clt",
     "body": ["${1:document}.closest('${2:class}')"]
+  },
+  "contains": {
+    "prefix": "ctn",
+    "body": ["${1:document}.contains('${2:class}')"]
   }
 }
