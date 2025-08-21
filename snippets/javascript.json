@@ -2,12 +2,12 @@
   "matches": {
     "prefix": "mat",
     "body": ["${1:element}.matches(\"${2:class}\")"],
-    "desc": "javascript matches method"
+    "description": "javascript matches method"
   },
   "TODO Comment": {
     "prefix": "todo",
     "body": ["// TODO: ${1:comment}"],
-    "desc": "Insert a TODO comment"
+    "description": "Insert a TODO comment"
   },
   "For-Of Loop": {
     "prefix": "frf",
@@ -16,14 +16,17 @@
   },
   "addEventListener": {
     "prefix": "aev",
-    "body": ["${1:document}.addEventListener('${2:event}', ${3:function})"]
+    "body": ["${1:document}.addEventListener('${2:event}', ${3:function})"],
+    "description": "javascript addEventListener method"
   },
   "closest": {
     "prefix": "clt",
-    "body": ["${1:document}.closest('${2:class}')"]
+    "body": ["${1:document}.closest('${2:class}')"],
+    "description": "javascript closest method"
   },
   "contains": {
     "prefix": "ctn",
-    "body": ["${1:document}.contains('${2:class}')"]
+    "body": ["${1:document}.contains('${2:class}')"],
+    "description": "javascript contains method"
   }
 }
