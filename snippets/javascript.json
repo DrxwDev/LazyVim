@@ -17,5 +17,9 @@
   "addEventListener": {
     "prefix": "aev",
     "body": ["${1:document}.addEventListener('${2:event}', ${3:function})"]
+  },
+  "closest": {
+    "prefix": "clt",
+    "body": ["${1:document}.closest('${2:class}')"]
   }
 }
