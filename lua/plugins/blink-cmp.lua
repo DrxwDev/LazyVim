@@ -2,18 +2,21 @@ return {
   {
     "saghen/blink.cmp",
     dependencies = {
-      "rafamadriz/friendly-snippets", -- snippets externos
-      "L3MON4D3/LuaSnip", -- motor de snippets
+      "rafamadriz/friendly-snippets",
       "moyiz/blink-emoji.nvim",
     },
-    version = "*",
+    version = "*", -- "1.*"
     lazy = true,
     opts = {
       completion = {
-        menu = { winblend = vim.o.pumblend },
+        menu = {
+          winblend = vim.o.pumblend,
+        },
       },
       signature = {
-        window = { winblend = vim.o.pumblend },
+        window = {
+          winblend = vim.o.pumblend,
+        },
       },
 
       keymap = {
@@ -28,7 +31,7 @@ return {
       },
 
       appearance = {
-        nerd_font_variant = "normal",
+        nerd_font_variant = "normal", -- "normal", "mono"
       },
 
       sources = {
@@ -45,27 +48,8 @@ return {
           },
         },
       },
-
-      snippets = {
-        expand = function(snippet)
-          require("luasnip").lsp_expand(snippet)
-        end,
-      },
-
       fuzzy = { implementation = "prefer_rust_with_warning" },
     },
     opts_extend = { "sources.default" },
-
-    config = function(_, opts)
-      require("blink.cmp").setup(opts)
-
-      -- cargar friendly-snippets
-      require("luasnip.loaders.from_vscode").lazy_load()
-
-      -- cargar tus propios snippets
-      require("luasnip.loaders.from_vscode").lazy_load({
-        paths = { vim.fn.stdpath("config") .. "/snippets" },
-      })
-    end,
   },
 }
