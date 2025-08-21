@@ -1,7 +1,7 @@
 {
   "matches": {
     "prefix": "mat",
-    "body": ["${1:element}.matches(\"${2:class}\")"],
+    "body": ["${1:element}.matches(\".${2:class}\")"],
     "description": "javascript matches method"
   },
   "TODO Comment": {
@@ -21,12 +21,12 @@
   },
   "closest": {
     "prefix": "clt",
-    "body": ["${1:document}.closest('${2:class}')"],
+    "body": ["${1:document}.closest('$.{2:class}')"],
     "description": "javascript closest method"
   },
   "contains": {
     "prefix": "ctn",
-    "body": ["${1:document}.contains('${2:class}')"],
+    "body": ["${1:document}.contains('$.{2:class}')"],
     "description": "javascript contains method"
   }
 }
