@@ -9,8 +9,9 @@
     "body": ["// TODO: ${1:comment}"],
     "desc": "Insert a TODO comment"
   },
-  "forof": {
+  "For-Of Loop": {
     "prefix": "frf",
-    "body": ["for (${1:iterator} of ${2:elements}){\n\t$3\n}"]
+    "body": ["for (${1:iterator} of ${2:object}) {", "\t$0", "}"],
+    "description": "For-Of Loop"
   }
 }
