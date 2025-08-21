@@ -8,5 +8,9 @@
     "prefix": "todo",
     "body": ["// TODO: ${1:comment}"],
     "desc": "Insert a TODO comment"
+  },
+  "forof": {
+    "prefix": "frf",
+    "body": ["for (${1:iterator} of ${2:elements}){\n\t$3\n}"]
   }
 }
