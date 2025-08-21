@@ -13,5 +13,9 @@
     "prefix": "frf",
     "body": ["for (${1:iterator} of ${2:object}) {", "\t$0", "}"],
     "description": "For-Of Loop"
+  },
+  "addEventListener": {
+    "prefix": "aev",
+    "body": ["${1:document}.addEventListener('${2:event}', ${3:function})"]
   }
 }
