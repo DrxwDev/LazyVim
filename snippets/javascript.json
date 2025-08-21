@@ -1,0 +1,12 @@
+{
+  "matches": {
+    "prefix": "mat",
+    "body": ["${1:element}.matches(\"${2:class}\")"],
+    "desc": "javascript matches method"
+  },
+  "TODO Comment": {
+    "prefix": "todo",
+    "body": ["// TODO: ${1:comment}"],
+    "desc": "Insert a TODO comment"
+  }
+}

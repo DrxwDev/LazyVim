@@ -2,22 +2,18 @@ return {
   {
     "saghen/blink.cmp",
     dependencies = {
-      "rafamadriz/friendly-snippets",
+      "rafamadriz/friendly-snippets", -- snippets externos
+      "L3MON4D3/LuaSnip", -- motor de snippets
       "moyiz/blink-emoji.nvim",
-      -- "Exafunction/windsurf.vim", -- Codeium
     },
-    version = "*", -- "1.*"
+    version = "*",
     lazy = true,
     opts = {
       completion = {
-        menu = {
-          winblend = vim.o.pumblend,
-        },
+        menu = { winblend = vim.o.pumblend },
       },
       signature = {
-        window = {
-          winblend = vim.o.pumblend,
-        },
+        window = { winblend = vim.o.pumblend },
       },
 
       keymap = {
@@ -32,11 +28,10 @@ return {
       },
 
       appearance = {
-        nerd_font_variant = "normal", -- "normal", "mono"
+        nerd_font_variant = "normal",
       },
 
       sources = {
-        -- default = { "lsp", "path", "snippets", "buffer", "emoji", "sql", "codeium" },
         default = { "lsp", "path", "snippets", "buffer", "emoji" },
         providers = {
           emoji = {
@@ -48,16 +43,29 @@ return {
               return vim.tbl_contains({ "gitcommit", "markdown" }, vim.o.filetype)
             end,
           },
-          -- codeium = {
-          --   name = "codeium",
-          --   module = "blink.compat.source",
-          --   score_offset = 5, -- Adjust as needed
-          --   opts = {},
-          -- },
         },
       },
+
+      snippets = {
+        expand = function(snippet)
+          require("luasnip").lsp_expand(snippet)
+        end,
+      },
+
       fuzzy = { implementation = "prefer_rust_with_warning" },
     },
     opts_extend = { "sources.default" },
+
+    config = function(_, opts)
+      require("blink.cmp").setup(opts)
+
+      -- cargar friendly-snippets
+      require("luasnip.loaders.from_vscode").lazy_load()
+
+      -- cargar tus propios snippets
+      require("luasnip.loaders.from_vscode").lazy_load({
+        paths = { vim.fn.stdpath("config") .. "/snippets" },
+      })
+    end,
   },
 }
