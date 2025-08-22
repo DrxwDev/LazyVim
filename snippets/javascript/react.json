@@ -1,0 +1,7 @@
+{
+  "framer motion tag": {
+    "prefix": "mtn",
+    "body": ["<motion.${1:tag}>${2:content}</motion.${1:tag}>"],
+    "description": "farmer motion fragment"
+  }
+}
