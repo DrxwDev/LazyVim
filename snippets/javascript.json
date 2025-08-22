@@ -28,5 +28,10 @@
     "prefix": "ctn",
     "body": ["${1:document}.contains('$.{2:class}')"],
     "description": "javascript contains method"
+  },
+  "framer motion tag": {
+    "prefix": "mtn",
+    "body": ["<motion.${1:tag}>${2:content}</motion.${1:tag}>"],
+    "description": "farmer motion fragment"
   }
 }
