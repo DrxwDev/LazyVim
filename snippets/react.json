@@ -3,5 +3,10 @@
     "prefix": "mtn",
     "body": ["<motion.${1:tag}>${2:content}</motion.${1:tag}>"],
     "description": "farmer motion fragment"
+  },
+  "react wrapper": {
+    "prefix": "wrap",
+    "body": ["<>${1:content}</>"],
+    "description": "Sugar Sintactic for React"
   }
 }
