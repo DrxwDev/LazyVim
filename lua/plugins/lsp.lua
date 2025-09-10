@@ -4,7 +4,10 @@ return {
     opts = function(_, opts)
       opts.servers = opts.servers or {}
 
-      opts.servers.tsserver = opts.servers.tsserver or {}
+      opts.servers.tsserver = vim.tbl_deep_extend("force", opts.servers.tsserver or {}, {
+        root_dir = require("lspconfig.util").root_pattern("tsconfig.app.json", "tsconfig.json", "package.json"),
+      })
+
       opts.servers.eslint = opts.servers.eslint or {}
 
       opts.ensure_installed = {
@@ -18,6 +21,7 @@ return {
         "eslint",
         "tailwindcss",
       }
+
       opts.servers.emmet_ls = {
         filetypes = {
           "html",
@@ -29,7 +33,6 @@ return {
         init_options = {
           html = {
             options = {
-              -- Para forzar atributos con comillas
               ["bem.enabled"] = true,
             },
           },
